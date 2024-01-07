@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS dev COLLATE utf8mb4_general_ci CHARACTER SET utf8mb4;
+
+CREATE USER dev@'%' IDENTIFIED BY 'dev';
+
+GRANT ALL PRIVILEGES ON dev.* TO 'dev'@'%';

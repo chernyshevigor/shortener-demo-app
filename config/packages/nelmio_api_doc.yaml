@@ -1,0 +1,44 @@
+nelmio_api_doc:
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
+    documentation:
+        info:
+            title: Shortener
+            description: This is an awesome Shortener!
+            version: 1.0.0
+        paths:
+            '/redirect/{shortUrl}':
+                get:
+                    tags:
+                        - 'Shortener'
+                    parameters:
+                        shortUrl:
+                            in: path
+                            name: shortUrl
+                            description: 'Short Url'
+                            required: true
+                            example: 'aaaab'
+                    responses:
+                        200:
+                            description: ''
+            '/generate':
+                post:
+                    tags:
+                        - 'Shortener'
+                    requestBody:
+                        content:
+                            multipart/form-data:
+                                schema:
+                                    required: [url]
+                                    type: object
+                                    properties:
+                                        url:
+                                            description: 'url'
+                                            type: string
+                                            example: 'https://www.google.com/search?q=shortener'
+                    responses:
+                        201:
+                            description: ''
+                        400:
+                            description: 'Invalid data'

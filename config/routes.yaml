@@ -1,0 +1,9 @@
+get_short_url:
+    path: /generate
+    controller: Shortener\Controller\ShortenerController::generateAction
+    methods: POST
+
+redirect_short_url:
+    path: /redirect/{shortUrl}
+    controller: Shortener\Controller\ShortenerController::redirectAction
+    methods: GET

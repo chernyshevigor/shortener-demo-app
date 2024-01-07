@@ -1,0 +1,6 @@
+includes:
+    - %rootDir%/../phpstan-strict-rules/rules.neon
+
+parameters:
+    level: 7
+    checkMissingIterableValueType: false

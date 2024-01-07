@@ -1,0 +1,13 @@
+{
+    "name": "shortener/code-style-rules",
+    "license": "proprietary",
+    "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.9"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

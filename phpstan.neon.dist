@@ -1,0 +1,14 @@
+includes:
+    - src/external_packages/phpstan-rules/config/phpstan.symfony-doctrine.neon
+
+parameters:
+    paths: [src]
+    excludePaths:
+        analyseAndScan:
+        - 'src/external_packages/*'
+    symfony:
+        container_xml_path: var/cache/dev/Shortener_KernelDevDebugContainer.xml
+        console_application_loader: tests/ConsoleApplication.php
+
+    doctrine:
+        objectManagerLoader: tests/bootstrap-orm.php

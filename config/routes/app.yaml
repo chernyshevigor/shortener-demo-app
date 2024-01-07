@@ -1,0 +1,13 @@
+user_hello:
+  path: /example/hello.{_format}
+  controller: Shortener\Controller\ExampleController::getAction
+  methods: GET
+  defaults:
+    _format: json
+
+user_upload:
+  path: /example/upload.{_format}
+  controller: Shortener\Controller\ExampleController::uploadAction
+  methods: POST
+  defaults:
+    _format: form
